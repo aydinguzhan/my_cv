@@ -1,5 +1,24 @@
-export interface IFormCreatedPages {}
+import { PageButton } from "../component/PageButton";
+import { MAIN_PAGENATION } from "../enums/mainPageRouter";
 
-export function FormCreatedPages(props: IFormCreatedPages) {
-  return <div>FORM ISLEMELERI</div>;
+export interface IFormCreatedPages {
+  setPage: any;
+}
+
+export function FormCreatedPages({ setPage }: IFormCreatedPages) {
+  const buttonArray = [
+    {
+      label: "Geri",
+      icon: "pi pi-arrow-left",
+      _onClick: () => {
+        setPage(MAIN_PAGENATION.ANASAYFA);
+      },
+    },
+  ];
+  return (
+    <>
+      <h1>FORM ISLEMELERI</h1>
+      <PageButton buttonArray={buttonArray} />
+    </>
+  );
 }
