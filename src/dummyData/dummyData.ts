@@ -18,24 +18,33 @@ export const navbarList: any = [
 export const ContentsCard : any = [
   {
     id : Math.random(),
-    title : "Form işlemleri",
-    subTitle : "Yeni Form içerikleri oluşturabilirsin.Daha fazlası için...",
-    buttonTitle : "Detaylar",
-    buttonRouterAdress : MAIN_PAGENATION.FORM_OLUSTUR 
+    title : "Github hesabım",
+    subTitle : "Keylogger , netflix clone , Js algoritma pratiği ve daha fazlası için...",
+    buttonTitle : "Git",
+    buttonRouterAdress : MAIN_PAGENATION.FORM_OLUSTUR ,
+    _onClick : () =>{
+      window.location.href ="https://github.com/aydinguzhan"
+    }
   },
   {
     id : Math.random(),
-    title : "Eski Kayıtlara Ulaş",
-    subTitle : "Oluşturduğun içeriklerini arayarak bulabilirsin. Daha fazlası için..",
+    title : "Linkedin Hesabım",
+    subTitle : "Çalışma hayatım, mesleki paylaşımlarım ve dahası için...",
     buttonTitle : "Detaylar",
-    buttonRouterAdress : MAIN_PAGENATION.ARA 
+    buttonRouterAdress : MAIN_PAGENATION.ARA ,
+    _onClick : () =>{ window.location.href ="https://www.linkedin.com/in/aydnoguz/"}
   },
   {
     id : Math.random(),
-    title : "Bana Destek olabilirsin",
-    subTitle : "Teknoloji süreklilik gerektirir.Bana destek olmak ister misin ?",
-    buttonTitle : "Destek ol!",
-    buttonRouterAdress : ""
+    title : "Benim ile İletişime Geç",
+    subTitle : "Teknoloji süreklilik gerektirir.İletişim için...",
+    buttonTitle : "Bana Ulaş!",
+    buttonRouterAdress : MAIN_PAGENATION.ILETISIM,
+    _onClick : ()=>{window.location.href ="mailto:aydinoguzhan2335@gmail.com?subject=Merhaba&body=İletişime geçmek istiyorum."}
+    
   },
 
 ]
+
+
+
