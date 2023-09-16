@@ -1,0 +1,6 @@
+export enum MAIN_PAGENATION {
+    ANASAYFA =  "ANASAYFA",
+    ARA = "ARA",
+    FORM_OLUSTUR =  "FORM_OLUSTUR"
+
+}
