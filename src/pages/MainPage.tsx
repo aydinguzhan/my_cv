@@ -7,7 +7,7 @@ export interface IMainPage {
 export function MainPage({setPage}: IMainPage) {
   return (
     <>
-      <div className="typewriter girid col-5 col-xl-5 col-md-9 d-none d-sm-block justify-content-center aling-item-center mx-auto my-5">
+      <div className="typewriter girid col-6 col-xl-6 col-md-10 d-none d-sm-block justify-content-center aling-item-center mx-auto my-5">
         <h1 className="">Hey! I'm Javascript developer...</h1>
       </div>
     <div className="row m-3 justify-content-center gap-2 ">
