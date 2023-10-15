@@ -1,20 +1,14 @@
 import * as React from "react";
 import { PageButton } from "../component/PageButton";
-import { MAIN_PAGENATION } from "../enums/mainPageRouter";
+import { goBack } from "../helper/buttonGroup";
 export interface ISearchPage {
   setPage: any;
 }
 
 export function SearchPage({ setPage }: ISearchPage) {
-  const buttonArray = [
-    {
-      label: "Geri",
-      icon: "pi pi-arrow-left",
-      _onClick: () => {
-        setPage(MAIN_PAGENATION.ANASAYFA);
-      },
-    },
-  ];
+
+  const buttonArray = goBack(setPage)
+
 
   return (
     <>

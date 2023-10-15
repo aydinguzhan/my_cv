@@ -14,9 +14,9 @@ function App() {
   const [page, setPage] = useState<string>(MAIN_PAGENATION.ANASAYFA);
 
   return (
+   <>
+     <NavbarComponenet setPage={setPage} navbarList={navbarList} />
     <div className="App">
-      <NavbarComponenet setPage={setPage} navbarList={navbarList} />
-
       <div className="container-fluid">
         {page === MAIN_PAGENATION.ANASAYFA && <MainPage setPage={setPage} />}
         {page === MAIN_PAGENATION.FORM_OLUSTUR && (
@@ -26,6 +26,7 @@ function App() {
         {page === MAIN_PAGENATION.ILETISIM && <IletisimPage />}
       </div>
     </div>
+   </>
   );
 }
 
