@@ -8,25 +8,24 @@ import {
   FormCreatedPages,
   IletisimPage,
 } from "./pages/ExportFiles";
-
 import "./App.css";
 function App() {
   const [page, setPage] = useState<string>(MAIN_PAGENATION.ANASAYFA);
 
   return (
-   <>
-     <NavbarComponenet setPage={setPage} navbarList={navbarList} />
-    <div className="App">
-      <div className="container-fluid">
-        {page === MAIN_PAGENATION.ANASAYFA && <MainPage setPage={setPage} />}
-        {page === MAIN_PAGENATION.FORM_OLUSTUR && (
-          <FormCreatedPages setPage={setPage} />
-        )}
-        {page === MAIN_PAGENATION.ARA && <SearchPage setPage={setPage} />}
-        {page === MAIN_PAGENATION.ILETISIM && <IletisimPage />}
+    <>
+      <NavbarComponenet setPage={setPage} navbarList={navbarList} />
+      <div className="App">
+        <div className="container-fluid">
+          {page === MAIN_PAGENATION.ANASAYFA && <MainPage setPage={setPage} />}
+          {page === MAIN_PAGENATION.FORM_OLUSTUR && (
+            <FormCreatedPages setPage={setPage} />
+          )}
+          {page === MAIN_PAGENATION.ARA && <SearchPage setPage={setPage} />}
+          {page === MAIN_PAGENATION.ILETISIM && <IletisimPage />}
+        </div>
       </div>
-    </div>
-   </>
+    </>
   );
 }
 

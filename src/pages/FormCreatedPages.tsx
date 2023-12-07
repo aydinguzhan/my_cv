@@ -21,13 +21,13 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
     {
       label: "Kaydet",
       icon: "pi pi-save",
-      _onClick: () => { },
+      _onClick: () => {},
       type: "submit",
     },
     {
       label: "Temnizle",
       icon: "pi pi-eraser",
-      _onClick: () => { },
+      _onClick: () => {},
       type: "reset",
     },
   ];
@@ -39,21 +39,11 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
         initialValues={{ firstName: "", lastName: "", email: "" }}
         innerRef={formikRef}
         onSubmit={(values: any) => {
-          console.log(values);
+          alert(JSON.stringify(values));
         }}
         validationSchema={validationSchema}
       >
-        {({
-          values,
-          errors,
-          touched,
-          handleChange,
-          setFieldValue,
-          handleBlur,
-          handleSubmit,
-          isSubmitting,
-          /* and other goodies */
-        }) => (
+        {({ values, errors, touched, setFieldValue }) => (
           <Form>
             <div className="field col-6 xxl:col-8 md:col-8 sm:col-4 m-auto p-4 my-3 bg-transparent text-white border border-white">
               <h4 className="title text-white field col">Form Oluştur</h4>
@@ -70,7 +60,6 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
                   className="col-8 text-white bg-transparent border border-round-md"
                 />
                 <div className="text-end bg-red col-12">
-
                   <ErrorMessage name="firstName" />
                 </div>
               </div>
@@ -84,7 +73,7 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
                   type="text"
                   className="col-8 text-white bg-transparent border border-round-md"
                 />
-               <div className="text-end bg-red col-12">
+                <div className="text-end bg-red col-12">
                   <ErrorMessage name="lastName" />
                 </div>
               </div>
@@ -97,9 +86,9 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
                   type="text"
                   className="col-8 text-white bg-transparent border border-round-md"
                 />
-           <div className="text-end bg-red col-12">
-              <ErrorMessage name="email" />
-              </div>
+                <div className="text-end bg-red col-12">
+                  <ErrorMessage name="email" />
+                </div>
               </div>
               <div
                 className="my-3 "

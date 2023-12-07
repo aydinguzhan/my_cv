@@ -1,5 +1,7 @@
 import { MAIN_PAGENATION } from "../enums/mainPageRouter";
 
+
+
 export const navbarList: any = [
   {
     title: "Anasayfa",
