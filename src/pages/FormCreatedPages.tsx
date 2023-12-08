@@ -3,6 +3,8 @@ import { PageButton } from "../component/PageButton";
 import { MAIN_PAGENATION } from "../enums/mainPageRouter";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { CreaterCode } from "../component/CreaterCode";
+import { formStr } from "../dummyData/dummyData";
 export interface IFormCreatedPages {
   setPage: any;
 }
@@ -33,6 +35,7 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
   ];
 
   const formikRef = useRef(null as any);
+
   return (
     <>
       <Formik
@@ -99,7 +102,19 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
                 </div>
               </div>
             </div>
-            <div className="my-2">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "2em",
+              }}
+            >
+              <div style={{ width: "90%" }}>
+                <CreaterCode codeString={formStr} />
+              </div>
+            </div>
+            <div className="my-2 ">
               <PageButton buttonArray={buttonArray} />
             </div>
           </Form>
