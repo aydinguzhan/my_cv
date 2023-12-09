@@ -1,7 +1,8 @@
-import React, { useState } from "react";
 import { PageButton } from "../component/PageButton";
 import { goBack } from "../helper/buttonGroup";
-import Nav from "react-bootstrap/Nav";
+import Form from "react-bootstrap/Form";
+import { CreaterCode } from "../component/CreaterCode";
+import { inputStr } from "../dummyData/dummyData";
 
 export interface ISearchPage {
   setPage: any;
@@ -9,64 +10,77 @@ export interface ISearchPage {
 
 export function SearchPage({ setPage }: ISearchPage) {
   const buttonArray = goBack(setPage);
-  const [visible, setVisible] = useState<string>("hidden");
-
-  const tabTitleArray = [
-    {
-      title: "TAB-1",
-      _onClick: () => {},
-    },
-    {
-      title: "TAB-2",
-      _onClick: () => {},
-    },
-  ];
-
-  const tabBodyArray = [
-    {
-      visible: visible,
-      bodyArea: () => {
-        return <div>BODY1</div>;
-      },
-    },
-    {
-      visible: "hidden",
-      bodyArea: () => {
-        return <div>BODY2</div>;
-      },
-    },
-  ];
-  const tabBarStyle: any = {
-    tabHeader: {
-      display: "flex",
-      gap: "5px",
-      witdh: "100%",
-      border: "1px solid white",
-    },
-    tabIndex: {
-      padding: "1px",
-      border: "1px solid red",
-    },
-  };
 
   return (
     <>
-      <h1>SEARCH PAGE</h1>
-      <Nav variant="tabs" defaultActiveKey="/">
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Active</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Option 2</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-
-      <PageButton buttonArray={buttonArray} />
+      <div className="container text-white my-5">
+        <div className="row">
+          <div className="col-md-6">
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  className="bg-transparent"
+                  type="email"
+                  placeholder="Enter email"
+                />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+            </Form>
+          </div>
+          <div className="col-md-6">
+            <Form.Label htmlFor="inputPassword5">Password</Form.Label>
+            <Form.Control
+              type="password"
+              id="inputPassword5"
+              aria-describedby="passwordHelpBlock"
+              className="bg-transparent"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <Form.Select
+              aria-label="Default select example"
+              className="bg-transparent "
+            >
+              <option>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </div>
+          <div className="col-md-6">
+            <Form>
+              <Form.Check // prettier-ignore
+                type="switch"
+                id="custom-switch"
+                label="Check this switch"
+              />
+              <Form.Check // prettier-ignore
+                disabled
+                type="switch"
+                label="disabled switch"
+                id="disabled-custom-switch"
+              />
+            </Form>
+          </div>
+        </div>
+      </div>
+      <div className="container text-white">
+        <div className="row">
+          <div className="col-md-12">
+            <CreaterCode codeString={inputStr} />
+          </div>
+        </div>
+        <div className="row my-3">
+          <div className="col-md-6">
+            <PageButton buttonArray={buttonArray} />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

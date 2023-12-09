@@ -21,7 +21,9 @@ function App() {
           {page === MAIN_PAGENATION.FORM_OLUSTUR && (
             <FormCreatedPages setPage={setPage} />
           )}
-          {page === MAIN_PAGENATION.ARA && <SearchPage setPage={setPage} />}
+          {page === MAIN_PAGENATION.INPUT_OLUSTUR && (
+            <SearchPage setPage={setPage} />
+          )}
           {page === MAIN_PAGENATION.ILETISIM && <IletisimPage />}
         </div>
       </div>

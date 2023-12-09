@@ -6,12 +6,16 @@ export const navbarList: any = [
     routeAdress: "ANASAYFA",
   },
   {
-    title: "Ara",
-    routeAdress: "ARA",
+    title: "Input",
+    routeAdress: "INPUT_OLUSTUR",
   },
   {
-    title: "Form Oluştur",
+    title: "Form",
     routeAdress: "FORM_OLUSTUR",
+  },
+  {
+    title: "Table",
+    routeAdress: "TABLE_OLUSTUR",
   },
 ];
 
@@ -32,7 +36,7 @@ export const ContentsCard: any = [
     title: "Linkedin Hesabım",
     subTitle: "Çalışma hayatım, mesleki paylaşımlarım ve dahası için...",
     buttonTitle: "Detaylar",
-    buttonRouterAdress: MAIN_PAGENATION.ARA,
+    buttonRouterAdress: MAIN_PAGENATION.INPUT_OLUSTUR,
     _onClick: () => {
       window.location.href = "https://www.linkedin.com/in/aydnoguz/";
     },
@@ -112,4 +116,63 @@ export const formStr = `
           </Form>
         )}
       </Formik>
+`;
+
+export const inputStr = `
+  <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  className="bg-transparent"
+                  type="email"
+                  placeholder="Enter email"
+                />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+            </Form>
+          </div>
+          <div className="col-md-6">
+            <Form.Label htmlFor="inputPassword5">Password</Form.Label>
+            <Form.Control
+              type="password"
+              id="inputPassword5"
+              aria-describedby="passwordHelpBlock"
+              className="bg-transparent"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <Form.Select
+              aria-label="Default select example"
+              className="bg-transparent"
+            >
+              <option>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </div>
+          <div className="col-md-6">
+            <Form>
+              <Form.Check // prettier-ignore
+                type="switch"
+                id="custom-switch"
+                label="Check this switch"
+              />
+              <Form.Check // prettier-ignore
+                disabled
+                type="switch"
+                label="disabled switch"
+                id="disabled-custom-switch"
+              />
+            </Form>
+          </div>
+        </div>
+      </div>
 `;

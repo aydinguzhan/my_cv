@@ -84,6 +84,7 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
                 <label htmlFor="lastName" className="col-4">
                   Email
                 </label>
+
                 <Field
                   name="email"
                   type="text"
@@ -102,20 +103,16 @@ export function FormCreatedPages({ setPage }: IFormCreatedPages) {
                 </div>
               </div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "2em",
-              }}
-            >
-              <div style={{ width: "90%" }}>
-                <CreaterCode codeString={formStr} />
+            <div className="container">
+              <div className="row">
+                <div className="col-md-12 my-5">
+                  <CreaterCode codeString={formStr} />
+                </div>
               </div>
-            </div>
-            <div className="my-2 ">
-              <PageButton buttonArray={buttonArray} />
+
+              <div className="my-2 ">
+                <PageButton buttonArray={buttonArray} />
+              </div>
             </div>
           </Form>
         )}
