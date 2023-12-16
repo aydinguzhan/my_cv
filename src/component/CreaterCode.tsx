@@ -29,7 +29,7 @@ export default function CreaterCode({ codeString, title }: ICreaterCode) {
   return (
     <div
       style={{
-        border: "1px solid white",
+        border: ".4em solid white",
         borderRadius: "1em",
         background: "#1e1e1e",
       }}

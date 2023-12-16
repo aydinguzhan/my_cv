@@ -17,7 +17,7 @@ function App() {
     <>
       <NavbarComponenet setPage={setPage} navbarList={navbarList} />
       <div className="App">
-        <div className="container-fluid">
+        <div className="container-fluid pb-4">
           {page === MAIN_PAGENATION.ANASAYFA && <MainPage setPage={setPage} />}
           {page === MAIN_PAGENATION.FORM_OLUSTUR && (
             <FormCreatedPages setPage={setPage} />
