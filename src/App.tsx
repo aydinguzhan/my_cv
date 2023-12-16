@@ -7,6 +7,7 @@ import {
   SearchPage,
   FormCreatedPages,
   IletisimPage,
+  AdvenceJs,
 } from "./pages/ExportFiles";
 import "./App.css";
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <SearchPage setPage={setPage} />
           )}
           {page === MAIN_PAGENATION.ILETISIM && <IletisimPage />}
+          {page === MAIN_PAGENATION.ADVENCE_JS && <AdvenceJs />}
         </div>
       </div>
     </>

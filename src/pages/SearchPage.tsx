@@ -1,7 +1,7 @@
 import { PageButton } from "../component/PageButton";
 import { goBack } from "../helper/buttonGroup";
 import Form from "react-bootstrap/Form";
-import { CreaterCode } from "../component/CreaterCode";
+import CreaterCode from "../component/CreaterCode";
 import { inputStr } from "../dummyData/dummyData";
 
 export interface ISearchPage {

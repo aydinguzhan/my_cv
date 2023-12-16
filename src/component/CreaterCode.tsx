@@ -5,6 +5,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import Button from "react-bootstrap/Button";
 export interface ICreaterCode {
   codeString: string;
+  title?: string;
 }
 const isCopyController = (isCopy: boolean) => {
   if (isCopy) {
@@ -17,7 +18,7 @@ const isCopyController = (isCopy: boolean) => {
     return <i className="pi pi-copy"></i>;
   }
 };
-export function CreaterCode({ codeString }: ICreaterCode) {
+export default function CreaterCode({ codeString, title }: ICreaterCode) {
   const [isCopy, setIsCopy] = useState(false);
 
   const handleCopy = () => {
@@ -44,7 +45,7 @@ export function CreaterCode({ codeString }: ICreaterCode) {
             padding: ".6em",
           }}
         >
-          <h4 style={{ color: "white" }}>Form</h4>
+          <h4 style={{ color: "white" }}>{title}</h4>
           <Button
             style={{ background: "#374151" }}
             variant="outline-light"

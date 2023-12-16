@@ -3,7 +3,7 @@ import { PageButton } from "../component/PageButton";
 import { MAIN_PAGENATION } from "../enums/mainPageRouter";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { CreaterCode } from "../component/CreaterCode";
+import CreaterCode from "../component/CreaterCode";
 import { formStr } from "../dummyData/dummyData";
 export interface IFormCreatedPages {
   setPage: any;

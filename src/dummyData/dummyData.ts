@@ -17,6 +17,10 @@ export const navbarList: any = [
     title: "Table",
     routeAdress: "TABLE_OLUSTUR",
   },
+  {
+    title: "Advence JavaScript",
+    routeAdress: "ADVENCE_JS",
+  },
 ];
 
 export const ContentsCard: any = [
