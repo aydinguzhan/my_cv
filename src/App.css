@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@200;500&family=Roboto:wght@300&display=swap");
+:root {
+  --color-1: #38598b;
+  --color-2: #113f67;
+  --color-3: #e7eaf6;
+  --color-4: #a2a8d3;
+}
+
 .App {
   background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
   background-size: 180% 180%;
@@ -41,7 +49,7 @@
     width: 0;
   }
   to {
-    width: 100%;
+    width: 850px;
   }
 }
 
@@ -54,4 +62,150 @@
   50% {
     border-color: white;
   }
+}
+
+.app {
+  font-family: "Playpen Sans", cursive;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid var(--color-2);
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeader {
+  width: 100%;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  justify-content: space-between;
+  background: var(--color-1);
+  color: var(--color-2);
+  border-radius: 0.6rem 0.6rem 0px 0px;
+}
+.tableTitle {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+.tableButtons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+.tableBody {
+  width: 100%;
+}
+.columnTitle {
+  display: flex;
+  min-height: 3rem;
+  border-bottom: 1px solid var(--color-2);
+  width: 100%;
+}
+.columnSpan {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
+.columnSpan:hover {
+  cursor: pointer;
+  color: var(--color-3);
+}
+.tableFooter {
+  width: 100%;
+  border-top: 1px solid var(--color-2);
+}
+.row-1 {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all;
+  cursor: pointer;
+}
+.rows .row-1:nth-child(even) {
+  background: var(--color-3);
+}
+.row-1:hover {
+  background-color: var(--color-4);
+}
+.rows .row-1:nth-child(even):hover {
+  background-color: var(--color-4);
+}
+.cell {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 4rem;
+}
+.checkBox {
+  display: flex;
+}
+.button {
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--color-2);
+  padding: 0.4rem;
+  text-transform: capitalize;
+  transition: all 800ms;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.tableFooter {
+  min-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0px 0px 0.5rem 0.5rem;
+}
+.pagenation span {
+  padding: 0.7em;
+  border-radius: 0.5rem;
+}
+.tablePagenation span:hover {
+  cursor: pointer;
+}
+
+.pagenation .selectPage {
+  transition: all 600ms;
+  color: white;
+  padding: 0.7rem;
+  background-color: var(--color-2);
+  animation: ease 1000ms;
+}
+
+
+.typewriter div{
+
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto ;
 }

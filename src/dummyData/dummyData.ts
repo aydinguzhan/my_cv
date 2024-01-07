@@ -15,7 +15,7 @@ export const navbarList: any = [
   },
   {
     title: "Table",
-    routeAdress: "TABLE_OLUSTUR",
+    routeAdress: "TABLE",
   },
   {
     title: "Advence JavaScript",
@@ -179,4 +179,92 @@ export const inputStr = `
           </div>
         </div>
       </div>
+`;
+
+export const tableStr = `
+ <div className="app table">
+      <div className="tableHeader">
+        <div className="tableTitle">{tableTitle}</div>
+        <div className="tableButtons">
+          {tableOptions.dynamicButtons.map((item, index) => {
+            return (
+              <Button
+                key={index}
+                className="tableDynamicButton"
+                onClick={item?.onClick}
+                label={item?.labelName}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="tableBody">
+        <div className="columnTitle">
+          {tableOptions.column.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="columnSpan "
+                onClick={() => {
+                  console.log("sort label", item.label);
+                }}
+              >
+                <span className="material-symbols-outlined">swap_vert</span>
+                {item.label}
+              </div>
+            );
+          })}
+        </div>
+        <div className="rows">
+          {tableOptions.data.map((row, rowIndex) => (
+            <div
+              onClick={() => {
+                tableOptions?.getSelectionValue(row);
+              }}
+              key={rowIndex}
+              className="row"
+            >
+              <span>
+                <CheckBox
+                  row={row}
+                  setSelectedRows={setSelectedRows}
+                  allChecked={allChecked}
+                />
+              </span>
+              {tableOptions.column.map((col, colIndex) => (
+                <span key={colIndex} className="cell">
+                  {row[col.field]}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="tableFooter">
+        <Pagenation tableOptions={tableOptions} />
+      </div>
+    </div>
+
+
+`;
+
+export const checkBoxStr = `
+import { useState } from "react";
+const CheckBox = (row, setSelectedRows, allChecked) => {
+  const [checked, setChecked] = useState(true);
+
+  return (
+    <input
+      type="checkbox"
+      name={row.name}
+      value={true}
+      onClick={() => {
+        setChecked(!checked);
+      }}
+      checked={allChecked}
+    />
+  );
+};
+
+export default CheckBox;
 `;
