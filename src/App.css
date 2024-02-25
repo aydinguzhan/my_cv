@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@200;500&family=Roboto:wght@300&display=swap");
+
 :root {
   --color-1: #38598b;
   --color-2: #113f67;
@@ -20,9 +21,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -35,11 +38,16 @@
 
 .typewriter h1 {
   color: white;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
   animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -48,6 +56,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 850px;
   }
@@ -55,10 +64,12 @@
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: white;
   }
@@ -91,6 +102,7 @@
   color: var(--color-2);
   border-radius: 0.6rem 0.6rem 0px 0px;
 }
+
 .tableTitle {
   flex: 1;
   display: flex;
@@ -98,21 +110,25 @@
   align-items: center;
   color: white;
 }
+
 .tableButtons {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   gap: 0.4rem;
 }
+
 .tableBody {
   width: 100%;
 }
+
 .columnTitle {
   display: flex;
   min-height: 3rem;
   border-bottom: 1px solid var(--color-2);
   width: 100%;
 }
+
 .columnSpan {
   flex: 1;
   display: flex;
@@ -122,14 +138,17 @@
   text-align: center;
   text-transform: capitalize;
 }
+
 .columnSpan:hover {
   cursor: pointer;
   color: var(--color-3);
 }
+
 .tableFooter {
   width: 100%;
   border-top: 1px solid var(--color-2);
 }
+
 .row-1 {
   margin: 0px;
   display: flex;
@@ -138,15 +157,19 @@
   transition: all;
   cursor: pointer;
 }
+
 .rows .row-1:nth-child(even) {
   background: var(--color-3);
 }
+
 .row-1:hover {
   background-color: var(--color-4);
 }
+
 .rows .row-1:nth-child(even):hover {
   background-color: var(--color-4);
 }
+
 .cell {
   flex: 1;
   display: flex;
@@ -155,9 +178,11 @@
   text-align: center;
   height: 4rem;
 }
+
 .checkBox {
   display: flex;
 }
+
 .button {
   background-color: white;
   outline: none;
@@ -176,6 +201,7 @@
   color: white;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 .tableFooter {
   min-height: 3rem;
   display: flex;
@@ -184,10 +210,12 @@
   background-color: white;
   border-radius: 0px 0px 0.5rem 0.5rem;
 }
+
 .pagenation span {
   padding: 0.7em;
   border-radius: 0.5rem;
 }
+
 .tablePagenation span:hover {
   cursor: pointer;
 }
@@ -201,11 +229,92 @@
 }
 
 
-.typewriter div{
+.typewriter div {
 
   max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto ;
+  margin: 10px auto;
+}
+
+.selectList-container {
+  border: 1px solid var(--color-3);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 700px;
+  color: var(--color-3);
+
+}
+
+.selectList-container>.selectList-header {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--color-3);
+
+}
+
+.selectList-container>.selectList-body {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.selectList-header>.title {
+  margin-top: 1rem;
+}
+
+.selectList-box:nth-child(1),
+.selectList-box:nth-child(3) {
+  flex: 4;
+  padding: 1em;
+
+}
+
+.selectList-box:nth-child(2) {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--color-3);
+  border-left: 1px solid var(--color-3);
+
+}
+
+.selectList-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.selectList-buttons>div {
+  font-size: x-large;
+  color: var(--color-3);
+  padding: .2em;
+  margin: .2em;
+
+}
+
+.selectList-buttons>div:hover {
+  background-color: var(--color-3);
+  border-radius: 8px;
+  color: var(--color-4);
+  cursor: pointer;
+}
+
+.select-elem {
+  background-color: var(--color-3);
+  color: var(--color-2)
+}
+
+.list-elem:hover {
+  cursor: pointer;
 }

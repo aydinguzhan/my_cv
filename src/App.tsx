@@ -11,6 +11,7 @@ import {
 } from "./pages/ExportFiles";
 import "./App.css";
 import Table from "./component/Table";
+import { SelectList } from "./pages/SelectList";
 function App() {
   const [page, setPage] = useState<string>(MAIN_PAGENATION.ANASAYFA);
   const [selectRow, setSelectRow] = useState({});
@@ -23,7 +24,7 @@ function App() {
     dynamicButtons: [
       {
         onClick: () => window.print(),
-        labelName: <span className="material-symbols-outlined">print</span>,
+        labelName: <span className="material-symbols-outlined ">print</span>,
       },
       {
         onClick: () => console.log("merhaba"),
@@ -96,6 +97,29 @@ function App() {
       },
     ],
   };
+  const dataList = [
+    {
+      id: Math.random(),
+      ad: "mark",
+      soyad: "lisbon",
+      kimliNo: "12345678901"
+
+    },
+    {
+      id: Math.random(),
+      ad: "Nevzat",
+      soyad: "Kasım",
+      kimliNo: "12345678901"
+
+    },
+    {
+      id: Math.random(),
+      ad: "fahri",
+      soyad: "Yılmaz",
+      kimliNo: "12345678901"
+
+    }
+  ]
   return (
     <>
       <NavbarComponenet setPage={setPage} navbarList={navbarList} />
@@ -116,6 +140,7 @@ function App() {
             </div>
           )}
         </div>
+        {page === MAIN_PAGENATION.SELECT_LIST && <SelectList dataList={dataList} setPage={setPage} />}
       </div>
     </>
   );

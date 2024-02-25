@@ -18,6 +18,10 @@ export const navbarList: any = [
     routeAdress: "TABLE",
   },
   {
+    title: "Select List",
+    routeAdress: "SELECT_LIST",
+  },
+  {
     title: "Advence JavaScript",
     routeAdress: "ADVENCE_JS",
   },

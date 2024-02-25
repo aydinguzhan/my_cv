@@ -6,21 +6,26 @@ import Button from "./Button";
 import CheckBox from "./CheckBox";
 import Pagenation from "./Pagenation";
 
-function Table({ tableOptions, tableTitle }) {
+interface ITableProp {
+  tableOptions: any;
+  tableTitle: any;
+}
+
+function Table({ tableOptions, tableTitle }: ITableProp) {
   const [setSelectedRows] = useState([]);
 
-  const [allChecked, setAllChecked] = useState(false);
+  const [allChecked, setAllChecked] = useState<boolean>(false);
 
   return (
     <div className="app table">
       <div className="tableHeader">
         <div className="tableTitle">{tableTitle}</div>
         <div className="tableButtons">
-          {tableOptions.dynamicButtons.map((item, index) => {
+          {tableOptions.dynamicButtons.map((item: any, index: any) => {
             return (
               <Button
                 key={index}
-                className="tableDynamicButton"
+
                 onClick={item?.onClick}
                 label={item?.labelName}
               />
@@ -30,7 +35,7 @@ function Table({ tableOptions, tableTitle }) {
       </div>
       <div className="tableBody">
         <div className="columnTitle">
-          {tableOptions.column.map((item, index) => {
+          {tableOptions.column.map((item: any, index: any) => {
             return (
               <div
                 key={index}
@@ -46,7 +51,7 @@ function Table({ tableOptions, tableTitle }) {
           })}
         </div>
         <div className="rows">
-          {tableOptions.data.map((row, rowIndex) => (
+          {tableOptions.data.map((row: any, rowIndex: any) => (
             <div
               onClick={() => {
                 tableOptions?.getSelectionValue(row);
@@ -61,7 +66,7 @@ function Table({ tableOptions, tableTitle }) {
                   allChecked={allChecked}
                 />
               </span>
-              {tableOptions.column.map((col, colIndex) => (
+              {tableOptions.column.map((col: any, colIndex: any) => (
                 <span key={colIndex} className="cell">
                   {row[col.field]}
                 </span>
