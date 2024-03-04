@@ -17,7 +17,7 @@ export const CheckBox = ({ row, setSelectedRows, allChecked }: ICheckBox) => {
         setChecked(!checked);
         console.log(e.target.value)
       }}
-      checked={checked}
+      checked={allChecked ? allChecked : checked}
     />
   );
 };

@@ -17,10 +17,19 @@ function Table({ tableOptions, tableTitle }: ITableProp) {
   const [allChecked, setAllChecked] = useState<boolean>(false);
 
   return (
-    <div className="app table">
+    <div className="app table my-4 ">
       <div className="tableHeader">
-        <div className="tableTitle">{tableTitle}</div>
+
+        <div className="tableTitle">
+
+
+
+          {tableTitle}
+
+
+        </div>
         <div className="tableButtons">
+
           {tableOptions.dynamicButtons.map((item: any, index: any) => {
             return (
               <Button
@@ -35,6 +44,18 @@ function Table({ tableOptions, tableTitle }: ITableProp) {
       </div>
       <div className="tableBody">
         <div className="columnTitle">
+          <div>
+            <input
+              type="checkbox"
+              name={"all"}
+              value={allChecked as any}
+              onClick={(e: any) => {
+                setAllChecked(!allChecked);
+                console.log(e.target.value)
+              }}
+              checked={allChecked}
+            />
+          </div>
           {tableOptions.column.map((item: any, index: any) => {
             return (
               <div

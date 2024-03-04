@@ -12,7 +12,7 @@ export function SelectList({ dataList, setPage }: ISelectListProps) {
     const [targetData, setTargetData] = useState<any>([]);
     const buttonArray = goBack(setPage);
     return (
-        <div className=''>
+        <div className='my-4'>
             <div className='selectList-container'>
                 <div className='selectList-header'>
                     <span className='title'>Source List</span>

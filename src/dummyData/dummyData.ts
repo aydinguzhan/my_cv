@@ -22,6 +22,10 @@ export const navbarList: any = [
     routeAdress: "SELECT_LIST",
   },
   {
+    title: "Drag & Drop",
+    routeAdress: "DRAG_DROP",
+  },
+  {
     title: "Advence JavaScript",
     routeAdress: "ADVENCE_JS",
   },

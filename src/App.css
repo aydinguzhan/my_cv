@@ -318,3 +318,64 @@
 .list-elem:hover {
   cursor: pointer;
 }
+
+.drag-drop-header {
+  display: flex;
+}
+
+
+.drag-drop-header>span {
+  flex: 1;
+  text-align: center;
+  border-bottom: 1px solid var(--color-3);
+  text-transform: uppercase;
+  color: var(--color-3)
+}
+
+.drag-drop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  min-height: 500px;
+  color: var(--color-3)
+}
+
+
+.drag-drop-container>.drag-drop-left,
+.drag-drop-right {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+  border: 3px solid var(--color-3);
+  border-radius: 18px;
+  gap: .5em;
+  overflow-y: scroll;
+  max-height: 480px;
+}
+
+
+
+.drag-drop-box {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+  align-items: center;
+  min-height: 100px;
+  border: 1px solid var(--color-3);
+  border-radius: 16px;
+  margin: .8em .8em;
+  font-size: x-large;
+  text-transform: capitalize;
+  text-align: center;
+
+
+}
+
+.blur {
+  opacity: .4;
+  border-color: var(--color-4);
+  background-color: var(--color-3);
+  color: var(--color-4);
+}

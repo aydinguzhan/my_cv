@@ -12,6 +12,7 @@ import {
 import "./App.css";
 import Table from "./component/Table";
 import { SelectList } from "./pages/SelectList";
+import { Dragdrop } from "./pages/Dragdrop";
 function App() {
   const [page, setPage] = useState<string>(MAIN_PAGENATION.ANASAYFA);
   const [selectRow, setSelectRow] = useState({});
@@ -135,12 +136,14 @@ function App() {
           {page === MAIN_PAGENATION.ILETISIM && <IletisimPage />}
           {page === MAIN_PAGENATION.ADVENCE_JS && <AdvenceJs />}
           {page === MAIN_PAGENATION.TABLE && (
-            <div className=" pt-3 px-4">
-              <Table tableTitle={"Table Title"} tableOptions={tableOptions} />
-            </div>
+
+            <Table tableTitle={"Table Title"} tableOptions={tableOptions} />
+
           )}
+          {page === MAIN_PAGENATION.SELECT_LIST && <SelectList dataList={dataList} setPage={setPage} />}
+          {page === MAIN_PAGENATION.DRAG_DROP && <Dragdrop />}
         </div>
-        {page === MAIN_PAGENATION.SELECT_LIST && <SelectList dataList={dataList} setPage={setPage} />}
+
       </div>
     </>
   );
