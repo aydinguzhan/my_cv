@@ -13,22 +13,19 @@ export const navbarList: any = [
     title: "Form",
     routeAdress: "FORM_OLUSTUR",
   },
-  {
-    title: "Table",
-    routeAdress: "TABLE",
-  },
+  // {
+  //   title: "Table",
+  //   routeAdress: "TABLE",
+  // },
   {
     title: "Select List",
     routeAdress: "SELECT_LIST",
   },
-  {
-    title: "Drag & Drop",
-    routeAdress: "DRAG_DROP",
-  },
-  {
-    title: "Advence JavaScript",
-    routeAdress: "ADVENCE_JS",
-  },
+
+  // {
+  //   title: "Advence JavaScript",
+  //   routeAdress: "ADVENCE_JS",
+  // },
 ];
 
 export const ContentsCard: any = [
@@ -41,6 +38,17 @@ export const ContentsCard: any = [
     buttonRouterAdress: MAIN_PAGENATION.FORM_OLUSTUR,
     _onClick: () => {
       window.location.href = "https://github.com/aydinguzhan";
+    },
+  },
+  {
+    id: Math.random(),
+    title: "Örnek Gösterim",
+    subTitle:
+      "Shopping app example",
+    buttonTitle: "Git",
+    buttonRouterAdress: MAIN_PAGENATION.PROJE,
+    _onClick: () => {
+      window.location.href = "https://eteration-task.netlify.app";
     },
   },
   {

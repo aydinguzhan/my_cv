@@ -141,7 +141,7 @@ function App() {
 
           )}
           {page === MAIN_PAGENATION.SELECT_LIST && <SelectList dataList={dataList} setPage={setPage} />}
-          {page === MAIN_PAGENATION.DRAG_DROP && <Dragdrop />}
+
         </div>
 
       </div>

@@ -49,7 +49,6 @@ export function Dragdrop(props: IDragdropProps) {
     const [targetList, setTargetList] = useState<any>([]);
     const [sourceList, setSourceist] = useState<any>(mockData);
     const onDragStart = (e: any, item: any, setState: any) => {
-
         setState()
         setIsBlur(true)
 
@@ -68,7 +67,6 @@ export function Dragdrop(props: IDragdropProps) {
         e.preventDefault();
     };
 
-    // Dış konteynerin sürüklenmesini engelleyen işlev
     const onExternalContainerDrop = (e: any) => {
         e.preventDefault();
     };
